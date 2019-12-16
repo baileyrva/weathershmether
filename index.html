@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link href='https://fonts.googleapis.com/css?family=Alegreya Sans' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" type="text/javascript"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="weather.css">
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand">Weather Forecast</a>
+    </nav>
+    <div id="mySidenav" class="sidenav">
+        <span class="searchBox">Search Your City:</span>
+        <input type="text" id="userCity" class="searchBox"></input>
+        <button class="searchBtn" type="submit"><i class="fa fa-search"></i></button>
+        <table id="previousCity">
+        </table>
+    </div>
+    <div class="offset-sm-2 col-sm-10 weatherReport container">
+        <div id="row1">
+            <div id="currentCityLbl"></div>
+            <div id="displayMoment"></div>
+            <div id="weatherIcon"></div>
+        </div>
+        <div class="cityTemp col-sm-12">Temperature: <label id="currentTempLbl"></label>°F
+        </div>
+        <div class="cityHum col-sm-12">Humidity: <label id="currentHumLbl"></label>%
+        </div>
+        <div class="cityWind col-sm-12">Wind Speed: <label id="currentWindLbl"></label>MPH
+        </div>
+        <div class="cityUV col-sm-12">UV Index: <label id="currentUVLbl"></label>
+        </div>
+    </div>
+    </div>
+    <div class="offset-sm-2 col-sm-10 weatherReport container">
+        <div class="col-sm-12">5-Day Forecast:
+        </div>
+        <div class="row">
+            <div id="weatherOne" class="weatherBox col-sm-2"></div>
+            <div id="weatherTwo" class="weatherBox col-sm-2"></div>
+            <div id="weatherThree" class="weatherBox col-sm-2"></div>
+            <div id="weatherFour" class="weatherBox col-sm-2"></div>
+            <div id="weatherFive" class="weatherBox col-sm-2"></div>
+        </div>
+    </div>
+
+
+
+    <script src="weather.js"></script>
+</body>
+
+</html>

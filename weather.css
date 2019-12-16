@@ -1,0 +1,91 @@
+* {
+  font-family: "Alegreya Sans";
+  font-size: 100%;
+}
+
+.weatherBox {
+  height: 7em;
+  margin-left: 1.5em;  
+  margin-top: 1em; 
+  border-style: solid;
+  border-color: grey; 
+  box-sizing: border-box; 
+}
+
+.navbar {
+  text-align: center;
+  color: white;
+}
+
+.navbar-brand {
+  width: 100%;
+  text-align: center;
+}
+
+.cityRow {
+  width: 20em;
+}
+
+.sidenav {
+  height: 100%;
+  width: 15em;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: lightgrey;
+  margin-top: 56px;
+  padding-top: 5px;
+}
+
+#row1 {
+  display: flex;
+  flex-direction: row;
+}
+
+#currentCityLbl {
+  display: flex;
+  flex-direction: column;
+  padding-left: .5em;
+}
+
+#displayMoment {
+  display: flex;
+  flex-direction: column;
+  padding-left: 1em;
+}
+
+#previousCity {
+  margin-left: 10px;
+  width: 100%;
+}
+
+.searchBox {
+  display: inline-block;
+  margin-left: 0.2em;
+  font-size: 1.3em;
+  width: 7em;
+}
+
+.weatherReport {
+  display: inline-block;
+  padding-left: 0;
+  height: 11em;
+  width: 50em;
+  font-size: 1.3em;
+  border-style: double;
+  border-color: lightgrey;
+}
+
+.cityWind,
+.cityTemp,
+.cityUV,
+.cityHum {
+  font-size: 0.8em;
+  margin: 0.4em;
+  font-style: bold;
+}
+
+.searchBtn {
+  background-color: lightskyblue;
+}
