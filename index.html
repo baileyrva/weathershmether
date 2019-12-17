@@ -10,10 +10,12 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <link href='https://fonts.googleapis.com/css?family=Alegreya Sans' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" type="text/javascript"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="weather.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
 
 </head>
 
@@ -23,7 +25,7 @@
         <a class="navbar-brand">Weather Forecast</a>
     </nav>
     <div id="mySidenav" class="sidenav">
-        <span class="searchBox">Search Your City:</span>
+        <span class="searchBox">City/State/Country, Country Code:</span>
         <input type="text" id="userCity" class="searchBox"></input>
         <button class="searchBtn" type="submit"><i class="fa fa-search"></i></button>
         <table id="previousCity">
@@ -33,7 +35,7 @@
         <div id="row1">
             <div id="currentCityLbl"></div>
             <div id="displayMoment"></div>
-            <div id="weatherIcon"></div>
+            <div id="currentIcon"></div>
         </div>
         <div class="cityTemp col-sm-12">Temperature: <label id="currentTempLbl"></label>°F
         </div>
@@ -49,11 +51,62 @@
         <div class="col-sm-12">5-Day Forecast:
         </div>
         <div class="row">
-            <div id="weatherOne" class="weatherBox col-sm-2"></div>
-            <div id="weatherTwo" class="weatherBox col-sm-2"></div>
-            <div id="weatherThree" class="weatherBox col-sm-2"></div>
-            <div id="weatherFour" class="weatherBox col-sm-2"></div>
-            <div id="weatherFive" class="weatherBox col-sm-2"></div>
+            <div class="weatherBox col-sm-2">
+                <div class="row">
+                    <label id="weatherOneTime"></label></div>
+                <div class="row">
+                    <div id="dayOneIcon"></div>
+                </div>
+                <div class="row">
+                    Temp: <label id="weatherOneTemp"></label>°F</div>
+                <div class="row">
+                    Humidity: <label id="weatherOneHum"></label>%</div>
+
+            </div>
+            <div class="weatherBox col-sm-2">
+                <div class="row">
+                    <label id="weatherTwoTime"></label></div>
+                <div class="row">
+                    <div id="dayTwoIcon"></div>
+                </div>
+                <div class="row">
+                    Temp: <label id="weatherTwoTemp"></label>°F</div>
+                <div class="row">
+                    Humidity: <label id="weatherTwoHum"></label>%</div>
+            </div>
+            <div class="weatherBox col-sm-2">
+                <div class="row">
+                    <label id="weatherThreeTime"></label></div>
+                <div class="row">
+                    <div id="dayTheeIcon"></div>
+                </div>
+                <div class="row">
+                    Temp: <label id="weatherThreeTemp"></label>°F</div>
+                <div class="row">
+                    Humidity: <label id="weatherThreeHum"></label>%</div>
+            </div>
+            <div class="weatherBox col-sm-2">
+                <div class="row">
+                    <label id="weatherFourTime"></label></div>
+                <div class="row">
+                    <div id="dayFourIcon"></div>
+                </div>
+                <div class="row">
+                    Temp: <label id="weatherFourTemp"></label>°F</div>
+                <div class="row">
+                    Humidity: <label id="weatherFourHum"></label>%</div>
+            </div>
+            <div class="weatherBox col-sm-2">
+                <div class="row">
+                    <label id="weatherFiveTime"></label></div>
+                <div class="row">
+                    <div id="dayFiveIcon"></div>
+                </div>
+                <div class="row">
+                    Temp: <label id="weatherFiveTemp"></label>°F</div>
+                <div class="row">
+                    Humidity: <label id="weatherFiveHum"></label>%</div>
+            </div>
         </div>
     </div>
 
