@@ -63,8 +63,6 @@ $(document).ready(function() {
       var currentDayFour = html.list[28].weather[0].main
       var currentDayFive = html.list[36].weather[0].main
       console.log(html.list[36].weather[0].main)
-      $("#dayOneIcon").append("<i></i>").addClass('fas fa-sun');
-      $("#dayTwoIcon").append("<i></i>").addClass('fas fa-sun');
       $("#weatherOneTime").text(moment(html.list[4].dt_txt).format('L'));
       $("#weatherOneTemp").text(html.list[4].main.temp);
       $("#weatherOneHum").text(html.list[4].main.humidity);
@@ -80,6 +78,86 @@ $(document).ready(function() {
       $("#weatherFiveTime").text(moment(html.list[36].dt_txt).format('L'));
       $("#weatherFiveTemp").text(html.list[36].main.temp);
       $("#weatherFiveHum").text(html.list[36].main.humidity);
+
+      if (currentDayOne === "Clouds") {
+        $("#dayOneIcon").append("<i></i>").addClass('fas fa-cloud-sun');
+      }
+      else if (currentDayOne === "Rain") {
+        $("#dayOneIcon").append("<i></i>").addClass('fas fa-cloud-rain');
+      }
+      else if (currentDayOne === "Snow") {
+        $("#dayOneIcon").append("<i></i>").addClass('fas fa-sun');
+      }
+      else if (currentDayOne === "Thunderstorm") {
+        $("#dayOneIcon").append("<i></i>").addClass('fas fa-bolt');
+      }
+      else {
+        $("#dayOneIcon").append("<i></i>").addClass('fas fa-sun');
+      }
+
+      if (currentDayTwo === "Clouds") {
+        $("#dayTwoIcon").append("<i></i>").addClass('fas fa-cloud-sun');
+      }
+      else if (currentDayTwo === "Rain") {
+        $("#dayTwoIcon").append("<i></i>").addClass('fas fa-cloud-rain');
+      }
+      else if (currentDayTwo === "Snow") {
+        $("#dayTwoIcon").append("<i></i>").addClass('fas fa-sun');
+      }
+      else if (currentDayTwo === "Thunderstorm") {
+        $("#dayTwoIcon").append("<i></i>").addClass('fas fa-bolt');
+      }
+      else {
+        $("#dayTwoIcon").append("<i></i>").addClass('fas fa-sun');
+      }
+
+      if (currentDayThree === "Clouds") {
+        $("#dayThreeIcon").append("<i></i>").addClass('fas fa-cloud-sun');
+      }
+      else if (currentDayThree === "Rain") {
+        $("#dayThreeIcon").append("<i></i>").addClass('fas fa-cloud-rain');
+      }
+      else if (currentDayThree === "Snow") {
+        $("#dayThreeIcon").append("<i></i>").addClass('fas fa-sun');
+      }
+      else if (currentDayThree === "Thunderstorm") {
+        $("#dayThreeIcon").append("<i></i>").addClass('fas fa-bolt');
+      }
+      else {
+        $("#dayThreeIcon").append("<i></i>").addClass('fas fa-sun');
+      }
+
+      if (currentDayFour === "Clouds") {
+        $("#dayFourIcon").append("<i></i>").addClass('fas fa-cloud-sun');
+      }
+      else if (currentDayFour === "Rain") {
+        $("#dayFourIcon").append("<i></i>").addClass('fas fa-cloud-rain');
+      }
+      else if (currentDayFour === "Snow") {
+        $("#dayFourIcon").append("<i></i>").addClass('fas fa-sun');
+      }
+      else if (currentDayFour === "Thunderstorm") {
+        $("#dayFourIcon").append("<i></i>").addClass('fas fa-bolt');
+      }
+      else {
+        $("#dayFourIcon").append("<i></i>").addClass('fas fa-sun');
+      }
+
+      if (currentDayFive === "Clouds") {
+        $("#dayFiveIcon").append("<i></i>").addClass('fas fa-cloud-sun');
+      }
+      else if (currentDayFive === "Rain") {
+        $("#dayFiveIcon").append("<i></i>").addClass('fas fa-cloud-rain');
+      }
+      else if (currentDayFive === "Snow") {
+        $("#dayFiveIcon").append("<i></i>").addClass('fas fa-sun');
+      }
+      else if (currentDayFive === "Thunderstorm") {
+        $("#dayFiveIcon").append("<i></i>").addClass('fas fa-bolt');
+      }
+      else {
+        $("#dayFiveIcon").append("<i></i>").addClass('fas fa-sun');
+      }
     });
   });
 });
