@@ -1,15 +1,15 @@
 $(document).ready(function() {
-  // global variables for uv index function 
+  // global variables for uv index function
   var lat;
   var lon;
-// storing in local storage and appending to list under search
+  // storing in local storage and appending to list under search
   for (var i = 0; i < localStorage.length; i++) {
     var currentCity = localStorage.getItem(localStorage.key(i));
     $("#previousCity").append(
       '<tr><td class="linkCity"><label> ' + currentCity + " </label></td></tr>"
     );
   }
-// allows the user to click a recently searched city to search again
+  // allows the user to click a recently searched city to search again
   $(".linkCity").click(function() {
     var tr = $(this)
       .closest("tr")
@@ -24,7 +24,7 @@ $(document).ready(function() {
     $("#currentCityLbl").text(userCity);
     ajaxCalls(userCity);
   });
-// clicking maginify glass provides an API pull 
+  // clicking maginify glass provides an API pull
   $(".searchBtn").click(function() {
     var NowMoment = moment().format("L");
     var eDisplayMoment = document.getElementById("displayMoment");
@@ -33,9 +33,9 @@ $(document).ready(function() {
     localStorage.setItem(userCity, userCity);
     $("#previousCity").append("<tr><td> " + userCity + " </td></tr>");
     $("#currentCityLbl").text(userCity);
-    ajaxCalls(userCity); 
+    ajaxCalls(userCity);
   });
-// all ajax pulls listed as one function (current, forecast, and uv index)
+  // all ajax pulls listed as one function (current, forecast, and uv index)
   function ajaxCalls(userCity) {
     $.ajax({
       url:
@@ -64,7 +64,7 @@ $(document).ready(function() {
       fiveDayForecast(html);
     });
   }
-// allows the display of weather data in main box
+  // allows the display of weather data in main box
   function currentWeatherDisplay(html) {
     var currentWeather = html.weather[0].main;
     if (currentWeather === "Clouds") {
@@ -95,7 +95,7 @@ $(document).ready(function() {
     lat = html.coord.lat;
     lon = html.coord.lon;
   }
-// allows the display of weather data in the forecast box
+  // allows the display of weather data in the forecast box
   function fiveDayForecast(html) {
     var currentDayOne = html.list[4].weather[0].main;
     var currentDayTwo = html.list[12].weather[0].main;
