@@ -39,14 +39,14 @@ $(document).ready(function() {
   function ajaxCalls(userCity) {
     $.ajax({
       url:
-        "http://api.openweathermap.org/data/2.5/weather?q=" +
+        "https://api.openweathermap.org/data/2.5/weather?q=" +
         userCity +
         "&units=imperial&appid=41a745f1eb505ff1affc1a58f9637280"
     }).done(function(html) {
       currentWeatherDisplay(html);
       $.ajax({
         url:
-          "http://api.openweathermap.org/data/2.5/uvi?&appid=41a745f1eb505ff1affc1a58f9637280&lat=" +
+          "https://api.openweathermap.org/data/2.5/uvi?&appid=41a745f1eb505ff1affc1a58f9637280&lat=" +
           lat +
           "&lon=" +
           lon
@@ -57,7 +57,7 @@ $(document).ready(function() {
 
     $.ajax({
       url:
-        "http://api.openweathermap.org/data/2.5/forecast?&appid=41a745f1eb505ff1affc1a58f9637280&q=" +
+        "https://api.openweathermap.org/data/2.5/forecast?&appid=41a745f1eb505ff1affc1a58f9637280&q=" +
         userCity +
         "&units=imperial&mode=JSON"
     }).done(function(html) {
