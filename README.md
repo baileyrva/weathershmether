@@ -12,3 +12,5 @@ I was the main creator of the main application and repository. For help when fac
 Functionality
 
 The app prompts the user with a text box to enter a city of their choosing. The app will then call the Open Weather API to display a set amount of parameters to the user. This includes current weather along with a 5-Day forecast. 
+
+Deployed Website: https://baileyrva.github.io/weathershmether/
